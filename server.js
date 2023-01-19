@@ -1,8 +1,6 @@
 const express = require("express");
 const path = require('path');
 const bodyParser = require('body-parser');
-// const mysql = require('mysql');
-
 const PORT = 3001;
 
 const app = express();
@@ -39,6 +37,9 @@ app.listen(PORT, () =>{
 
 // const signupRoute = require("./routes/Signup");
 // const loginRoute = require("./routes/Login");
+
+// app.use('/signup', signupRoute);
+// app.use('/login', loginRoute);
 
 // app.use('/signup', signupRoute);
 // app.use('/login', loginRoute);
