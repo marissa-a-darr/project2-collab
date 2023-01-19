@@ -8,6 +8,7 @@ router.get("/", (req, res) => {
     res.sendFile(path.join(initialPath, "login.html"));
 });
 
+
 // router.post("/", (req, res) => {
 //     res.send({data: "User created!" });
 // });
