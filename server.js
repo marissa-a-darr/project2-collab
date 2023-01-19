@@ -40,3 +40,6 @@ app.listen(PORT, () =>{
 
 // app.use('/signup', signupRoute);
 // app.use('/login', loginRoute);
+
+// app.use('/signup', signupRoute);
+// app.use('/login', loginRoute);
