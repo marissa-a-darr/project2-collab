@@ -1,3 +1,15 @@
+:root {
+    --cream: rgba(224, 220, 219, 1);
+    --tan: rgba(215, 188, 193, 1);
+    --ltblue: rgb(168, 189, 210, 1);
+    --blue: rgb(11, 75, 139, 1);
+    --dkpink: rgba(187, 118, 136, 1);
+    --ltpink: rgba(221, 168, 178, 1);
+    --ltbrown: rgba(137, 95, 73, 1);
+    --brown: rgba(54, 30, 20, 1);
+    --black: rgba(15, 18, 27, 1);
+}
+
 *{
     margin: 0;
     padding: 0;
