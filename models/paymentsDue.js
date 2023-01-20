@@ -19,6 +19,18 @@ Payments.init(
     type: DataTypes.DATEONLY,
     allowNull: false, 
   },
+  amount : {
+    type: DataTypes.DECIMAL,
+    allowNull: false
+  },
+  bill_id: {
+    type:DataTypes.STRING,
+    references: {
+      model: 'billType',
+      key: 'id',
+      unique: false
+    }
+  },
   user_id : {
     type:DataTypes.INTEGER,
     references: {
