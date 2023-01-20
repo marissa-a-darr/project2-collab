@@ -4,6 +4,29 @@
     box-sizing: border-box;
 }
 
+/* Navbar */
+#navbar {
+    background-color: var(--ltblue);
+    height: 120px;
+}
+
+#BHMM-text{
+    color:var(--black);
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.navbar-brand {
+    margin-left: 15px;
+    margin-right: 30px;
+}
+
+.nav-link {
+    color: var(--dkblue);
+    font-size: 25px;
+    margin-left: 20px;
+}
+
 body {
     position: relative;
     width: 100%;
@@ -42,7 +65,7 @@ body {
     border: none;
 }
 
-.greeting{
+.welcome-text{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 100px;
     color: white;
