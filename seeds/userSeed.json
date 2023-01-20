@@ -1,0 +1,19 @@
+[
+ { "first_name": "Jack",
+  "last_name": "White",
+  "email": "jackwhite123@gmail.com",
+  "password": "banana289"
+ },
+ {"first_name": "Martha",
+  "last_name": "Steward",
+  "email": "cookingiscool@hotmail.com",
+  "password": "strawberries434"
+
+},
+{
+  "first_name": "Steven",
+  "last_name": "Speilberg",
+  "email": "dinosaursgorawr@gmail.com",
+  "password": "bigteethTRex"
+}
+]

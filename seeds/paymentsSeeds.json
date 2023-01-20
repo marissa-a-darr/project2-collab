@@ -1,0 +1,43 @@
+[
+  {
+    "payment_name": "Verizon",
+    "payment_date": "2022-01-23",
+    "amount": 137.25,
+    "bill_type": 4, 
+    "user_id": 1
+  },
+  {
+    "payment_name": "Rent",
+    "payment_date": "2022-01-25",
+    "amount": 2500,
+    "bill_type": 2,
+    "user_id": 1
+  },
+  {
+    "payment_name": "AT&T",
+    "payment_date": "2022-01-04",
+    "amount": 102.34,
+    "bill_type": 4,
+    "user_id": 2
+  },
+  {
+    "payment_name": "Car Payment",
+    "payment_date": "2022-02-03",
+    "amount": 328.31,
+    "bill_type": 4,
+    "user_id": 2
+  },
+  {
+    "payment_name": "UberEats One",
+    "payment_date": "2022-01-23",
+    "amount": 15,
+    "bill_type": 1,
+    "user_id": 3
+  },
+  {
+    "payment_name": "Mortgage",
+    "payment_date": "2022-01-30",
+    "bill_type": 2,
+    "user_id": 3
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "bill_type": "Grocery"
+  },
+  {
+    "bill_type": "Housing"
+  },
+  {
+    "bill_type": "Entertainment"
+  },
+  {
+    "bill_type": "Utilities"
+  }
+]
