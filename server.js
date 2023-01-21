@@ -8,6 +8,7 @@ const app = express();
 let initialPath = path.join(__dirname, "public");
 app.use(bodyParser.json());
 app.use(express.static(initialPath));
+
 app.get('/home', (req, res) => {
     res.sendFile(path.join(initialPath, "home.html"));
 })
@@ -36,6 +37,9 @@ app.listen(PORT, () =>{
 
 // const signupRoute = require("./routes/Signup");
 // const loginRoute = require("./routes/Login");
+
+// app.use('/signup', signupRoute);
+// app.use('/login', loginRoute);
 
 // app.use('/signup', signupRoute);
 // app.use('/login', loginRoute);
