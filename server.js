@@ -1,36 +1,28 @@
 const express = require("express");
 const path = require('path');
 const bodyParser = require('body-parser');
-const PORT = 3001;
-
+// const routes = require('./routes');
+//const sequelize = require('./config/connection');
+const PORT = process.env.PORT || 3001;
 const app = express();
 
-let initialPath = path.join(__dirname, "public");
 app.use(bodyParser.json());
 app.use(express.static(initialPath));
-
-app.get('/home', (req, res) => {
-    res.sendFile(path.join(initialPath, "home.html"));
-})
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(initialPath, "login.html"));
-})
-
-app.get('/register', (req, res) => {
-    res.sendFile(path.join(initialPath, "register.html"));
-})
+app.use(routes); 
 
 
-app.listen(PORT, () =>{
-    console.log(`Server listening at ${PORT}`);
-});
+app.listen(PORT, () =>
+  console.log(`App listening at http://localhost:${PORT}`)
+);
+// sequelize.sync({ force: false }).then(() => {
+//     app.listen(PORT, () => console.log('Now listening'));
+//   });
+  
 
 
 
 
-
-
+//TO DO: 
 
 
 

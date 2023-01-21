@@ -1,5 +1,5 @@
-const {Model, DataTypes} = require ('sequelize');
-const { model, Sequelize } = require('../config/connection');
+const {Model, DataTypes} = require('sequelize');
+const sequelize = require('../config/connection');
 
 class Payments extends Model {}
 Payments.init(
@@ -26,7 +26,7 @@ Payments.init(
   bill_id: {
     type:DataTypes.STRING,
     references: {
-      model: 'billType',
+      model: 'billtype',
       key: 'id',
       unique: false
     }
@@ -34,7 +34,7 @@ Payments.init(
   user_id : {
     type:DataTypes.INTEGER,
     references: {
-      model: 'User',
+      model: 'user',
       key: 'id',
       unique: false
     }
