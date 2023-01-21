@@ -5,16 +5,16 @@ const cubeToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjEwMDAwMDAwMDAs
 
 const cubeApi = new CubejsApi(cubeToken, { apiUrl });
 
-export async function getAquisitionsByYear() {
-  const acquisitionsByYearQuery = {
+export async function getMonthlyPaymentsByYear() {
+  const monthlyPaymentsByYearQuery = {
     dimensions: [
-      'Artworks.yearAcquired',
+      'payments.monthAcquired',
     ],
     measures: [
-      'Artworks.count'
+      'payments.count'
     ],
     filters: [ {
-      member: 'Artworks.yearAcquired',
+      member: 'payments.monthAcquired',
       operator: 'set'
     } ],
     order: {
