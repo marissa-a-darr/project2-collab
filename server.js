@@ -2,19 +2,7 @@ const express = require("express");
 
 const PORT = 3001;
 
-const app = express();
 
-app.get('/home', (req, res) => {
-    res.sendFile(path.join(initialPath, "home.html"));
-})
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(initialPath, "login.html"));
-})
-
-app.get('/register', (req, res) => {
-    res.sendFile(path.join(initialPath, "register.html"));
-})
 
 
 app.listen(PORT, () =>{
