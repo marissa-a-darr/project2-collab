@@ -1,7 +1,8 @@
 const { Model, DataTypes } = require ('sequelize');
-const { model, Sequelize } = require('../config/connection');
+const sequelize = require('../config/connection');
 
 class Payments extends Model {}
+
 Payments.init(
   {
     id:{ 
@@ -9,32 +10,31 @@ Payments.init(
     allowNull: false,
     primaryKey: true,
     autoIncrement: true, 
-
   },
   payment_name: {
-    type:DataTypes.STRING,
+    type: DataTypes.STRING,
     allowNull: false,
   },
   payment_date: {
     type: DataTypes.DATEONLY,
     allowNull: false, 
   },
-  amount : {
+  amount: {
     type: DataTypes.DECIMAL,
     allowNull: false
   },
   bill_id: {
-    type:DataTypes.STRING,
+    type: DataTypes.STRING,
     references: {
-      model: 'billType',
+      model: 'billtype',
       key: 'id',
       unique: false
-    }
+    },
   },
   user_id : {
     type:DataTypes.INTEGER,
     references: {
-      model: 'User',
+      model: 'user',
       key: 'id',
       unique: false
     }
@@ -45,10 +45,11 @@ Payments.init(
   // }
   
 },
-{sequelize,
-timestamps: false, 
-freezeTableName: true,
-underscored: true,
-modelName: 'Payments Due'}
+{
+  sequelize,
+  timestamps: false, 
+  freezeTableName: true,
+  underscored: true,
+  modelName: 'payments'}
 );
 module.exports = Payments;
