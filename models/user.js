@@ -8,8 +8,8 @@ class User extends Model {
   }
 }
 
-User.init(
-  {
+User.init({
+
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -55,8 +55,7 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
-  }
-);
+    modelName: 'User',
+  });
 
 module.exports = User;

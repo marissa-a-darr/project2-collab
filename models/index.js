@@ -1,16 +1,17 @@
-const User = require('./User');
-const  Payments= require('./paymentsDue');
-const billType = require('./billType');
+const User = require('./user');
+const Payments = require('./paymentsDue');
+const BillType = require('./billType');
+
 User.hasMany(Payments, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
 
-billType.hasMany(Payments, {
+BillType.hasMany(Payments, {
   foreignKey: "bill_id",
   onDelete: 'CASCADE'
 })
 
 
 
-module.exports = { User, Payments, billType};
+module.exports = { User, Payments, BillType };
