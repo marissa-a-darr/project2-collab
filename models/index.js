@@ -1,4 +1,4 @@
-const User = require('./user');
+const User = require('./User');
 const Payments = require('./paymentsDue');
 const BillType = require('./billType');
 
@@ -14,4 +14,4 @@ BillType.hasMany(Payments, {
 
 
 
-module.exports = { User, Payments, BillType };
+module.exports = { User, Payments, BillType};

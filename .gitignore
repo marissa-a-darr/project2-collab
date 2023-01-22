@@ -1,4 +1,8 @@
 
 DS_STORE
 node_modules
-package-lock.json
+.parcel-cache
+dist
+.env
+.package-lock.json
+
