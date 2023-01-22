@@ -1,6 +1,8 @@
 const express = require("express");
+const Sequelize = require('sequelize');
 const sequelize = require("./config/connection");
 const path = require("path");
+const bcrypt = require("bcrypt");
 // const exphbs = require('express-handlebars');
 
 
