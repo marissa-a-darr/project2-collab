@@ -1,9 +1,6 @@
 const {Model, DataTypes} = require ('sequelize');
 const { model, Sequelize } = require('../config/connection');
 
-class Payments extends Model {}
-Payments.init(
-  {
     id:{ 
     type: DataTypes.INTEGER,
     allowNull: false,
