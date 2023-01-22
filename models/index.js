@@ -1,6 +1,6 @@
 const User = require('./User');
 const Payments = require('./paymentsDue');
-const BillType = require('./billType');
+const BillType = require('./billType')
 
 User.hasMany(Payments, {
   foreignKey: 'user_id',
