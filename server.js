@@ -1,13 +1,22 @@
 const express = require("express");
 const path = require('path');
 const bodyParser = require('body-parser');
-const PORT = 3001;
+const expensesRoutes = require('./routes/api/expenses').router;
+const homeRoutes = require('./controllers/homeRoutes').router;
 
+
+const PORT = 3001;
 const app = express();
+
 
 let initialPath = path.join(__dirname, "public");
 app.use(bodyParser.json());
 app.use(express.static(initialPath));
+
+app.use('/', homeRoutes);
+app.use('/api/expenses', expensesRoutes);
+
+
 
 app.get('/home', (req, res) => {
     res.sendFile(path.join(initialPath, "home.html"));

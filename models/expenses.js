@@ -1,9 +1,9 @@
-const { Model, DataTypes} = require ('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Sales extends Model {}
+class Expenses extends Model {}
 
-Sales.init(
+Expenses.init(
   {
     id:{ 
     type: DataTypes.INTEGER,
@@ -15,7 +15,7 @@ Sales.init(
     type: DataTypes.STRING,
     allowNull: false
   },
-  value: {
+  amount: {
     type: DataTypes.INTEGER,
     allowNull: false
   }
@@ -25,11 +25,97 @@ Sales.init(
   timestamps: false, 
   freezeTableName: true,
   underscored: true,
-  modelName: 'sales'}
+  modelName: 'expenses'}
 );
 
 
-module.exports = Sales;
+module.exports = Expenses;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const Sequelize = require('sequelize');
+// const sequelize = require('../config/connection');
+
+// const Expenses = sequelize.define('expenses', {
+//     month: {
+//         type: Sequelize.STRING,
+//         allowNull: false
+//     },
+//     amount: {
+//         type: Sequelize.INTEGER,
+//         allowNull: false
+//     }
+// });
+
+// module.exports = Expenses;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
