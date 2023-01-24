@@ -1,26 +1,28 @@
-const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 
-class billType extends Model {}
-billType.init(
+class BillType extends Model {}
+
+BillType.init(
   {
-    id: {
+    id:{ 
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
-    },
-    bill_type: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+      autoIncrement: true, 
+
   },
-  {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: "Bill Type",
+  bill_type: {
+    type: DataTypes.STRING,
+    allowNull: false
   }
+},
+{
+  sequelize,
+  timestamps: false, 
+  freezeTableName: true,
+  underscored: true,
+  modelName: 'billtype'}
 );
-module.exports = billType;
+
+module.exports = BillType;
