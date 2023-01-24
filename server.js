@@ -31,7 +31,7 @@ onDelete: 'CASCADE'
 });
 
 //Sync the models with the database
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
 console.log('Models synced successfully');
 app.listen(3001, () => {
 console.log('Server started on port 3001');
