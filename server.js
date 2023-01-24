@@ -1,54 +1,43 @@
+const path = require("path");
 const express = require("express");
-const path = require('path');
-const bodyParser = require('body-parser');
-const expensesRoutes = require('./routes/api/expenses').router;
-const homeRoutes = require('./controllers/homeRoutes').router;
-const seedFunction = require('./seeds/seeds');
+const bodyParser = require("body-parser");
+const routes = require("./routes");
+const sequelize = require("./config/connection");
+const exphbs = require("express-handlebars");
+const session = require("express-session");
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 const app = express();
 
+const SequelizeStore = require("connect-session-sequelize")(session.Store);
+const hbs = exphbs.create({ helpers });
 
-let initialPath = path.join(__dirname, "public");
-app.use(bodyParser.json());
-app.use(express.static(initialPath));
+const sess = {
+  secret: "Super secret secret",
+  cookie: {
+    maxAge: 300000,
+    httpOnly: true,
+    secure: false,
+    sameSite: "strict",
+  },
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize,
+  }),
+};
 
-app.use('/', homeRoutes);
-app.use('/api/expenses', expensesRoutes);
+app.use(session(sess));
 
+app.engine("handlebars", hbs.engine);
+app.set("view engine", "handlebars");
 
-app.get('/home', (req, res) => {
-    res.sendFile(path.join(initialPath, "home.html"));
-})
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "public")));
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(initialPath, "login.html"));
-})
+app.use(routes);
 
-app.get('/register', (req, res) => {
-    res.sendFile(path.join(initialPath, "register.html"));
-})
-
-
-app.listen(PORT, () =>{
-    
-    console.log(`Server listening at ${PORT}`);
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log("Now listening"));
 });
-
-
-
-// seedFunction.seedDatabase;
-
-
-
-
-
-
-// const signupRoute = require("./routes/Signup");
-// const loginRoute = require("./routes/Login");
-
-// app.use('/signup', signupRoute);
-// app.use('/login', loginRoute);
-
-// app.use('/signup', signupRoute);
-// app.use('/login', loginRoute);
