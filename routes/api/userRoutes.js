@@ -1,5 +1,5 @@
 const path = require("path");
-const router = ('express').Router();
+const router = require ('express').Router();
 const bcrypt = require('bcrypt'); 
 const User = require('../../models/user')
 
@@ -65,12 +65,5 @@ router.post('/logout', (req, res) => {
   });
 
 
-// router.put("/", (req, res) => {
-//     res.send({data: "User updated!" });
-// });
-
-// router.delete("/", (req, res) =>{
-//     res.send({data: "User deleted!"});
-// });
 
 module.exports = router;
