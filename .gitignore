@@ -1,6 +1,7 @@
-DS_STORE
+.DS_STORE
 node_modules
 .parcel-cache
 dist
 .env
 .package-lock.json
+.env

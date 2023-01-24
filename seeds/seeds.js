@@ -1,5 +1,5 @@
 const sequelize = require ('sequelize');
-const {Payments, User, billType, billType} = require ('../models');
+const {Payments, User, billType} = require ('../models');
 const paymentsSeedData = require ('./paymentsSeeds.json');
 const userSeedData= require ('./userSeed.json')
 const billTypeSeedData = require ('./billTypeSeeds.json')
@@ -11,3 +11,5 @@ const seedDatabase = async () => {
   const billTypes = await billType.bulkCreate(billTypeSeedData);
   
 }
+
+seedDatabase();
