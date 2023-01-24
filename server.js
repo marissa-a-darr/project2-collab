@@ -3,7 +3,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const expensesRoutes = require('./routes/api/expenses').router;
 const homeRoutes = require('./controllers/homeRoutes').router;
-
+const seedFunction = require('./seeds/seeds');
 
 const PORT = 3001;
 const app = express();
@@ -15,7 +15,6 @@ app.use(express.static(initialPath));
 
 app.use('/', homeRoutes);
 app.use('/api/expenses', expensesRoutes);
-
 
 
 app.get('/home', (req, res) => {
@@ -32,12 +31,13 @@ app.get('/register', (req, res) => {
 
 
 app.listen(PORT, () =>{
+    
     console.log(`Server listening at ${PORT}`);
 });
 
 
 
-
+// seedFunction.seedDatabase;
 
 
 

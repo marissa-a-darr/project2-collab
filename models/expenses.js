@@ -44,22 +44,6 @@ module.exports = Expenses;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // const Sequelize = require('sequelize');
 // const sequelize = require('../config/connection');
 
@@ -75,21 +59,6 @@ module.exports = Expenses;
 // });
 
 // module.exports = Expenses;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

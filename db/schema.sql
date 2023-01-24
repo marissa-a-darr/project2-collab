@@ -1,2 +1,3 @@
 DROP DATABASE IF EXISTS payme_db;
 CREATE DATABASE payme_db;
+    
