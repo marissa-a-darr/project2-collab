@@ -38,6 +38,13 @@
     margin-left: 20px;
 }
 
+.logout {
+    color: var(--dkblue);
+    font-size: 25px;
+    margin-left: 600px;
+    text-decoration: none;
+}
+
 /* New Expense Button */
 #new {
     background-color: var(--cream);
@@ -61,11 +68,10 @@
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 100px;
-    height: 250px;
-
+    height: 300px;
 }
 
-.monthly-expense {
+.payment_name {
     font-size: 35px;
     font-weight: bold;
     color: var(--pink);
@@ -73,6 +79,14 @@
     border-radius: 10px 10px 10px 10px;
     text-align: center;
     margin-bottom: 20px;
+}
+
+/* Bill Type */
+.type_bill {
+    font-size: 25px;
+    color: var(--dkblue);
+    text-align: center;
+    margin-bottom: 10px; 
 }
 
 /* Payment Due*/
@@ -126,4 +140,31 @@
     margin-left: 110px;
     font-weight: bold;
     background-color: var(--dkpink);
+}
+
+/* Dashboard */
+#welcome-text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#welcome-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card-text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: var(--dkblue);
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
 }
