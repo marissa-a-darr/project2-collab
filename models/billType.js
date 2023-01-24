@@ -21,6 +21,9 @@ BillType.init(
     timestamps: false, 
     freezeTableName: true,
     underscored: true,
-    modelName: 'billtype'}
+    modelName: 'Billtype'}
 );
+
+sequelize.sync({force: true});
+
 module.exports = BillType;

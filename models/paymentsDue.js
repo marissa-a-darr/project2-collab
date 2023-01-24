@@ -24,19 +24,19 @@ Payments.init(
     allowNull: false
   },
   bill_id: {
-    type: DataTypes.STRING,
+    type: DataTypes.INTEGER,
     references: {
-      model: 'billtype',
+      model: 'Billtype',
       key: 'id',
-      unique: false
+      unique: true
     },
   },
   user_id : {
     type:DataTypes.INTEGER,
     references: {
-      model: 'user',
+      model: 'User',
       key: 'id',
-      unique: false
+      unique: true
     }
   }
 },
@@ -45,6 +45,6 @@ Payments.init(
   timestamps: false, 
   freezeTableName: true,
   underscored: true,
-  modelName: 'payments'}
+  modelName: 'Payments'}
 );
 module.exports = Payments;

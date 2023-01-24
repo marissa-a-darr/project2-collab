@@ -1,45 +1,44 @@
-const express = require("express");
-const Sequelize = require('sequelize');
-const sequelize = require("./config/connection");
-const path = require("path");
-const bcrypt = require("bcrypt");
-// const exphbs = require('express-handlebars');
-
-
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const routes = require('./routes');
+const path = require('path');
+const sequelize = require('./config/connection');
+const { User, Payments, BillType } = require('./models');
+const exphbs = require('express-handlebars');
+const helpers = require('./utils/helpers');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
 
+// Set up Handlebars.js engine with custom helpers
+const hbs = exphbs.create({ helpers });
 
-
-// const hbs = exphbs.create({});
-
-// app.engine('handlebars', hbs.engine);
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(require('./controllers'));
+app.use(cors());
+app.use(bodyParser.json());
 
-sequelize.sync().then(() => {
-    app.listen(PORT, () => console.log('Now listening'));
+// Define associations
+User.hasMany(Payments, {
+foreignKey: 'user_id',
+onDelete: 'CASCADE'
 });
 
+BillType.hasMany(Payments, {
+foreignKey: "bill_id",
+onDelete: 'CASCADE'
+});
 
+//Sync the models with the database
+sequelize.sync({ force: false }).then(() => {
+console.log('Models synced successfully');
+app.listen(3001, () => {
+console.log('Server started on port 3001');
+});
+});
 
+app.use(routes);
 
-
-
-
-
-
-
-// const signupRoute = require("./routes/Signup");
-// const loginRoute = require("./routes/Login");
-
-// app.use('/signup', signupRoute);
-// app.use('/login', loginRoute);
-
-// app.use('/signup', signupRoute);
-// app.use('/login', loginRoute);
+//Add the static folder
+app.use(express.static(path.join(__dirname, 'public')));

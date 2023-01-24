@@ -5,7 +5,8 @@
         "main": "server.js",
         "scripts": {
                 "test": "node server.js",
-                "start": "node server.js"
+                "start": "node server.js", 
+                "seed": "node seeds/seeds.js"
         },
         "repository": {
                 "type": "git",
@@ -24,12 +25,16 @@
         "dependencies": {
                 "bcrypt": "^5.1.0",
                 "body-parser": "^1.20.1",
+                "cors": "^2.8.5",
                 "dotenv": "^16.0.3",
                 "express": "^4.18.2",
+                "express-handlebars": "^6.0.6",
                 "expresss": "^0.0.0",
                 "i": "^0.3.7",
                 "inquirer": "^9.1.4",
+                "install": "^0.13.0",
                 "mysql2": "^3.0.1",
+                "npm": "^9.3.1",
                 "path": "^0.12.7",
                 "sequelize": "^6.28.0"
         }
