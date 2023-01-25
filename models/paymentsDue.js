@@ -1,4 +1,4 @@
-const {Model, DataTypes} = require('sequelize');
+const { Model, DataTypes } = require ('sequelize');
 const sequelize = require('../config/connection');
 
 class Payments extends Model {}
@@ -24,11 +24,11 @@ Payments.init(
     allowNull: false
   },
   bill_id: {
-    type: DataTypes.STRING,
+    type: DataTypes.INTEGER,
     references: {
-      model: 'billtype',
+      model: 'Billtype',
       key: 'id',
-      unique: false
+      unique: true
     },
   },
   user_id : {
@@ -36,20 +36,15 @@ Payments.init(
     references: {
       model: 'user',
       key: 'id',
-      unique: false
+      unique: true
     }
   }
-  //FEATURE TO BE ADDED IN FUTURE VERSIONS 
-  // autopay_enabled: {
-
-  // }
-  
 },
 {
   sequelize,
   timestamps: false, 
   freezeTableName: true,
   underscored: true,
-  modelName: 'payments'}
+  modelName: 'Payments'}
 );
 module.exports = Payments;

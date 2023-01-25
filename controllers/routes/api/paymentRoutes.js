@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { async } = require('rxjs');
-const { Payments, User } = require ('../../models');
-const withAuth = require('../../utils/auth');
+const { Payments, User } = require ('../../../models');
+const withAuth = require('../../../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
@@ -33,7 +33,7 @@ router.post('/', withAuth, async (req, res) => {
     res.status(400).json(err);
   }
 });
-router.delete('/:id', withAuth, async (res, res)=> {
+router.delete('/:id', withAuth, async (req, res)=> {
   try {
     const paymentData = await Payments.destroy({
       where: {
@@ -51,4 +51,3 @@ router.delete('/:id', withAuth, async (res, res)=> {
   }
 });
 module.exports = router; 
-
