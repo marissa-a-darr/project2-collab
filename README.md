@@ -1,3 +1,7 @@
+# Better Have My Money
+
+Group Project #2
+
 ## User Story
 
 AS A user
