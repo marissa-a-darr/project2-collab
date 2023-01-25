@@ -80,7 +80,7 @@ THEN I am signed out of the site
 
 - Authentication (express-session/cookies)
 
-- .env to protect API keys/Sensative information
+- .env to protect API keys/Sensitive information
 
 
 ## Mockup
