@@ -1,7 +1,6 @@
 DROP DATABASE IF EXISTS payme_db;
 CREATE DATABASE payme_db;
 
-
 USE payme_db;
 
 -- Users table
@@ -30,7 +29,6 @@ CREATE TABLE Payments (
     FOREIGN KEY (user_id) REFERENCES User(id)
 
 );
-
 
 -- CREATE TABLE expenses (
 --     id INT AUTO_INCREMENT PRIMARY KEY,
