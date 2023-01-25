@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const routes = require('./routes');
+const Router = require('./routes/api/userRoutes');
 const path = require('path');
 const sequelize = require('./config/connection');
 const { User, Payments, BillType } = require('./models');
@@ -10,8 +10,12 @@ const helpers = require('./utils/helpers');
 
 const app = express();
 
-// Set up Handlebars.js engine with custom helpers
-const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create({ 
+    helpers, 
+    extname: '.hbs', 
+    layoutsDir: path.join(__dirname, 'views/layouts'), 
+    partialsDir: path.join(__dirname, 'views/partials') 
+});
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
@@ -38,7 +42,7 @@ console.log('Server started on port 3001');
 });
 });
 
-app.use(routes);
+app.use(Router);
 
 //Add the static folder
 app.use(express.static(path.join(__dirname, 'public')));

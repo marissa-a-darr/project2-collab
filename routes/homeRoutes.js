@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const {User} = require('../../models/user');
-const withAuth = require('../../utils/auth');
+const {User} = require('../models/user');
+const withAuth = require('../utils/auth');
 
 // Prevent non logged in users from viewing the homepage
 router.get('/', withAuth, async (req, res) => {
@@ -10,7 +10,7 @@ router.get('/', withAuth, async (req, res) => {
         order: [['name', 'ASC']],
         });
 
-        const users = userData.map((project) => project.get({ plain: true }));
+        const users = userData.map((payment) => payment.get({ plain: true }));
 
         res.render('homepage', {
             users,
