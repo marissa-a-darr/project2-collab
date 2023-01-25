@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { async } = require('rxjs');
-const { Payments, User } = require ('../../models');
-const withAuth = require('../../utils/auth');
+const { Payments, User } = require ('../../../models');
+const withAuth = require('../../../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
@@ -51,4 +51,3 @@ router.delete('/:id', withAuth, async (req, res)=> {
   }
 });
 module.exports = router; 
-
