@@ -3,10 +3,10 @@ const router = require ('express').Router();
 const bcrypt = require('bcrypt'); 
 const User = require('../../models/user')
 
-let initialPath = path.join(__dirname, "public");
+let initialPath = path.join(__dirname, "views");
 
 router.get("/", (req, res) => {
-    res.sendFile(path.join(initialPath, "login.html"));
+    res.sendFile(path.join(initialPath, "/login"));
 });
 
 router.post("/"), async (req, res) => {
@@ -38,7 +38,7 @@ router.post("/"), async (req, res) => {
 }
 
 router.get('/register', (req, res) => {
-    res.sendFile(path.join(initialPath, "register.html"));
+    res.sendFile(path.join(initialPath, "/register"));
 })
 
 

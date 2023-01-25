@@ -37,6 +37,7 @@
   {
     "payment_name": "Mortgage",
     "payment_date": "2022-01-30",
+    "amount": 666.69,
     "bill_type": 2,
     "user_id": 3
   }

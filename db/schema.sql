@@ -1,7 +1,7 @@
 DROP DATABASE IF EXISTS payme_db;
 CREATE DATABASE payme_db;
 
-USE payme_db
+USE payme_db;
 
 -- Users table
 CREATE TABLE User (
@@ -11,13 +11,12 @@ CREATE TABLE User (
     email VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL
 );
-
 -- BillType table
 CREATE TABLE BillType (
     id INT AUTO_INCREMENT PRIMARY KEY,
     bill_type VARCHAR(40) NOT NULL
-);
 
+);
 -- Payments table
 CREATE TABLE Payments (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -31,9 +30,9 @@ CREATE TABLE Payments (
 
 );
 
-    
-CREATE TABLE Expenses (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    month VARCHAR(11) NOT NULL,
-    amount INT NOT NULL  
-);
+-- CREATE TABLE expenses (
+--     id INT AUTO_INCREMENT PRIMARY KEY,
+--     month VARCHAR(11) NOT NULL,
+--     amount INT NOT NULL,
+
+-- );
