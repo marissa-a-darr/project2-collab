@@ -7,8 +7,8 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 
 app.use(bodyParser.json());
-app.use(express.static(initialPath));
-app.use(routes); 
+// app.use(express.static(initialPath));
+// app.use(routes); 
 
 
 app.listen(PORT, () =>
