@@ -1,7 +1,7 @@
 DROP DATABASE IF EXISTS payme_db;
 CREATE DATABASE payme_db;
 
-USE payme_db;
+USE payme_db
 
 -- Users table
 CREATE TABLE User (
@@ -32,8 +32,8 @@ CREATE TABLE Payments (
 );
 
     
-CREATE TABLE expenses (
+CREATE TABLE Expenses (
     id INT AUTO_INCREMENT PRIMARY KEY,
     month VARCHAR(11) NOT NULL,
-    amount INT NOT NULL,  
+    amount INT NOT NULL  
 );
