@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const userRoutes = require('./userRoutes');
-const projectRoutes = require('./expensesRoutes');
-const chartRoutes = require('./expenses')
+const userRoutes = require('../routes/api/userRoutes');
+const paymentRoutes = require('../routes/api/paymentRoutes');
+const chartRoutes = require('../routes/api/chartRoutes')
 
 router.use('/users', userRoutes);
-router.use('/expenses', projectRoutes);
+router.use('/expenses', paymentRoutes);
 router.use('/chart', chartRoutes);
 
 module.exports = router;
