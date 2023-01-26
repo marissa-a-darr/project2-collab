@@ -133,13 +133,19 @@
 
 /* Paid Button */
 #paid-btn {
+    margin-left: 20px;
+}
+
+#delete-btn {
+    margin-left: 20px;
+}
+
+#btn-box {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-left: 110px;
-    font-weight: bold;
-    background-color: var(--dkpink);
 }
 
 /* Dashboard */
