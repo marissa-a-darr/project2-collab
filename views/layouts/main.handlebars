@@ -16,7 +16,7 @@
 <body>
   
   {{#if logged_in}}
-  <a href="/homepage">Profile</a>
+  <a href="/homepage">Homepage</a>
   <!--Nav-Bar-->
   <div id="title-container">
       <nav class="navbar navbar-expand-lg" id="navbar">
@@ -29,10 +29,10 @@
             <!--Other Page Links-->
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="nav-link" aria-current="page" href="../partials/homepage.handlebars">Home</a>
-                <a class="nav-link" href="../partials/expenses.handlebars">Expenses</a>
-                <a class="nav-link" href="../partials/chart.handlebars">Chart</a>
-                <a class="nav-link" href="../partials/login.handlebars">Log Out</a>
+                <a class="nav-link" aria-current="page" href="/homepage">Home</a>
+                <a class="nav-link" href="/expenses">Expenses</a>
+                <a class="nav-link" href="/chart">Chart</a>
+                <a class="nav-link" href="/logout">Log Out</a>
               </div>
             </div>
           </div>
@@ -40,12 +40,11 @@
   </div>
 
   {{else}}
-  <a href="/login">Login</a>
     <header>
     <div class="container">
-        <button class="logout">Log Out</button>
-        <button class="login">Log In</button>
-        <h1 class="greeting">Hello</h1>
+      <button class="submit-btn" id="login">Log Out</button>
+      <button class="submit-btn" id="logout">Log In</button>
+      <h1 class="greeting">Hello</h1>
     </div>
   </header>
   {{/if}}
@@ -55,10 +54,14 @@
     {{{ body }}}
   </main>
 
+  <footer>
+
+  </footer>
 
   <!-- Render script for logged in users only-->
   {{#if logged_in}}
   <script src="../../controllers/routes/api/userRoutes.js"></script>
   {{/if}}
 </body>
+
 </html>
