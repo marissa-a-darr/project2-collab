@@ -13,18 +13,39 @@
 </head>
 
 <body>
-  <header>
+  {{#if logged_in}}
+  <a href="/homepage">Profile</a>
+  <!--Nav-Bar-->
+  <div id="title-container">
+      <nav class="navbar navbar-expand-lg" id="navbar">
+          <!--Title-->
+          <div class="container-fluid">
+            <a class="navbar-brand" id="BHMM-text" href="#">Better Have My Money</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--Other Page Links-->
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link" aria-current="page" href="../partials/homepage.handlebars">Home</a>
+                <a class="nav-link" href="../partials/expenses.handlebars">Expenses</a>
+                <a class="nav-link" href="../partials/chart.handlebars">Chart</a>
+                <a class="nav-link" href="../partials/login.handlebars">Log Out</a>
+              </div>
+            </div>
+          </div>
+        </nav>  
+  </div>
+
+  {{else}}
+  <a href="/login">Login</a>
+    <header>
     <div class="container">
         <button class="logout">Log Out</button>
         <button class="login">Log In</button>
         <h1 class="greeting">Hello</h1>
     </div>
   </header>
-
-  {{#if logged_in}}
-  <a href="/views/partials/homepage.handlebars">Profile</a>
-  {{else}}
-  <a href="/views/partials/login.handlebars">Login</a>
   {{/if}}
 
   <main>
