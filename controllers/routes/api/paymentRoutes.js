@@ -13,6 +13,9 @@ router.get('/', async (req, res) => {
         },
       ],
     })
+    console.log('TESTTESTEST' + paymentData)
+    console.log('TEST2----------------------------------------')
+    
     const payments = paymentData.map((payment)=> payment.get({plain: true}));
     res.render('expenses', {
       payments,
