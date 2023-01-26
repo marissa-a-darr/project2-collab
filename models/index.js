@@ -14,4 +14,4 @@ BillType.hasMany(Payments, {
 
 
 
-module.exports = { User, Payments, BillType };
+module.exports = { User, Payments, BillType};

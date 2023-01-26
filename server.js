@@ -1,7 +1,7 @@
 const path = require("path");
 const express = require("express");
 const bodyParser = require("body-parser");
-const routes = require("./controllers/routes");
+const routes = require("./controllers/api");
 const sequelize = require("./config/connection");
 const exphbs = require("express-handlebars");
 const session = require("express-session");
@@ -27,6 +27,16 @@ const sess = {
     db: sequelize,
   }),
 };
+
+sequelize.sync()
+  .then(() => {
+    console.log('Expenses table created successfully');
+  })
+  .catch(err => {
+    console.error('Unable to create table Expenses', err);
+  });
+
+
 
 app.use(session(sess));
 
