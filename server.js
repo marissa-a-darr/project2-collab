@@ -23,16 +23,7 @@ app.set('view engine', 'handlebars');
 app.use(cors());
 app.use(bodyParser.json());
 
-// Define associations
-User.hasMany(Payments, {
-foreignKey: 'user_id',
-onDelete: 'CASCADE'
-});
 
-BillType.hasMany(Payments, {
-foreignKey: "bill_id",
-onDelete: 'CASCADE'
-});
 
 //Sync the models with the database
 sequelize.sync({ force: true }).then(() => {
