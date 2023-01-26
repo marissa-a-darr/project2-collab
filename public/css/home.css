@@ -65,6 +65,36 @@ body {
     border: none;
 }
 
+.logout{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: white;
+    background: none;
+    text-decoration: underline;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.login{
+    position: absolute;
+    top: 10px;
+    right: 80px;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: white;
+    background: none;
+    text-decoration: underline;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
 .welcome-text{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 100px;

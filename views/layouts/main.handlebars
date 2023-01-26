@@ -7,23 +7,45 @@
     <title>Better Have My Money</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/public/css/expenses.css" />
-    <link rel="stylesheet" href="/public/css/form.css" />
-    <link rel="stylesheet" href="/public/css/home.css" />
+    <link rel="stylesheet" href="../../public/css/expenses.css" />
+    <link rel="stylesheet" href="../../public/css/form.css" />
+    <link rel="stylesheet" href="../../public/css/home.css" />
 </head>
 
 <body>
-  <header>
-    {{!-- <div class="container">
-        <button class="logout">Log Out</button>
-        <h1 class="greeting">Hello</h1>
-    </div> --}}
-  </header>
-
   {{#if logged_in}}
-  <a href="/views/homepage.handlebars">Profile</a>
+  <a href="/homepage">Profile</a>
+  <!--Nav-Bar-->
+  <div id="title-container">
+      <nav class="navbar navbar-expand-lg" id="navbar">
+          <!--Title-->
+          <div class="container-fluid">
+            <a class="navbar-brand" id="BHMM-text" href="#">Better Have My Money</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--Other Page Links-->
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link" aria-current="page" href="../partials/homepage.handlebars">Home</a>
+                <a class="nav-link" href="../partials/expenses.handlebars">Expenses</a>
+                <a class="nav-link" href="../partials/chart.handlebars">Chart</a>
+                <a class="nav-link" href="../partials/login.handlebars">Log Out</a>
+              </div>
+            </div>
+          </div>
+        </nav>  
+  </div>
+
   {{else}}
-  <a href="/views/login.handlebars">Login</a>
+  <a href="/login">Login</a>
+    <header>
+    <div class="container">
+        <button class="logout">Log Out</button>
+        <button class="login">Log In</button>
+        <h1 class="greeting">Hello</h1>
+    </div>
+  </header>
   {{/if}}
 
   <main>
@@ -36,7 +58,7 @@
   {{#if logged_in}}
   
   <!--Add Script-->
-  <script src=""></script>
+  <script src="../../controllers/routes/api/userRoutes.js"></script>
   {{/if}}
 </body>
 </html>
