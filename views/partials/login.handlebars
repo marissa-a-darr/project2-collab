@@ -1,18 +1,24 @@
-<!--Login-->
-<div class="alert-box">
-  <p class="alert">Sorry!</p>
-</div>
+<div>
+    <!--Login-->
+    <div class="form">
+        <h1 class="heading">login</h1>
+        <div class="form-input">
+        <input type="email" placeholder="Email" autocomplete="off" class="email" required>
+        <input type="password" placeholder="Password" autocomplete="off" class="password" required>
+        </div>
+        <button class="submit-btn">Log In</button>
+    </div>
 
-<!--Login Layout-->
-<div class="form">
-  <h1 class="heading">login</h1>
-  <input type="email" placeholder="Email" autocomplete="off" class="email" required>
-  <input type="password" placeholder="Password" autocomplete="off" class="password" required>
-  <button class="submit-btn">Log In</button>
-  
-  <!--If user does not have an account-->
-  <a href="../partials/register.handlebars" class="link">Not a member? Register here</a>
+    <!--Sign Up-->
+    <div class="form" class="register-form">
+        <h1 class="heading">Register</h1>
+        <div class="form-input">
+        <input type="text" placeholder="Username" autocomplete="off" class="username" required>
+        <input type="email" placeholder="Email" autocomplete="off" class="email" required>
+        <input type="password" placeholder="Password" autocomplete="off" class="password" required>
+        </div>
+        <button class="submit-btn">Register</button>
+    </div>
 </div>
-
 <!--Add Script-->
 <script src="./js/login.js"></script>
