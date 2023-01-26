@@ -1,0 +1,33 @@
+<!--Expenses-->
+<div>
+<!--New Expense-->
+<div id="new">
+  <button type="submit" class="btn" id="new-btn">+ New Expense</button>
+</div>
+
+<!--Expenses Card-->
+<div id="container">
+  <div class="card" style="width: 20rem;">
+      <div class="card-body">
+          <div class="payment_name" id="payment_name">{{Payments.payment_name}}</div>
+          <div id="mini-container">
+          <div class="type_bill">
+              <div class="bill_type" id="bill_type">{{BillType.bill_type}}</div>
+          </div>
+          <div class="payment-amount">
+              <div class="amountdue-text">Amount Due:</div>
+              <div class="amount" id="amount">{{Payments.amount}}</div>
+          </div>
+          <div class="payment-due">
+              <div class="due-text">Due:</div>
+              <div class="payment_date" id="payment_date">{{Payments.payment_date}}</div>
+          </div>
+          </div>
+          <div id="btn-box">
+          <button type="submit" class="btn" id="paid-btn">Paid</button>
+          <button class="btn" id="delete-btn" data-id="delete">Delete</button>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
