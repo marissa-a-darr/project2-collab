@@ -13,18 +13,30 @@
 </head>
 
 <body>
-    <div class="container">
+  <header>
+    {{!-- <div class="container">
         <button class="logout">Log Out</button>
         <h1 class="greeting">Hello</h1>
-    </div>
+    </div> --}}
+  </header>
 
   {{#if logged_in}}
   <a href="/views/homepage.handlebars">Profile</a>
   {{else}}
   <a href="/views/login.handlebars">Login</a>
   {{/if}}
+
+  <main>
+    <!-- Render the Sub-Layout-->
+    {{{ body }}}
+  </main>
+
+
+  <!-- Render script for logged in users only-->
+  {{#if logged_in}}
   
+  <!--Add Script-->
+  <script src=""></script>
+  {{/if}}
 </body>
 </html>
-
-  <script src="../public/js/form.js"></script>

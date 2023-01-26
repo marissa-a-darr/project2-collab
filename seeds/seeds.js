@@ -1,5 +1,5 @@
 const sequelize = require ('sequelize');
-const {Payments, User, billType} = require ('../models');
+const {Payments, User, BillType} = require ('../models');
 const paymentsSeedData = require ('./paymentsSeeds.json');
 const userSeedData= require ('./userSeed.json')
 const billTypeSeedData = require ('./billTypeSeeds.json')
