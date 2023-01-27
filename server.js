@@ -28,16 +28,6 @@ const sess = {
   }),
 };
 
-sequelize.sync()
-  .then(() => {
-    console.log('Expenses table created successfully');
-  })
-  .catch(err => {
-    console.error('Unable to create table Expenses', err);
-  });
-
-
-
 app.use(session(sess));
 
 app.engine("handlebars", hbs.engine);

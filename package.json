@@ -6,8 +6,6 @@
   "scripts": {
     "test": "node server.js",
     "start": "node server.js",
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html",
     "seed": "node seeds/seeds.js"
   },
   "repository": {
@@ -25,7 +23,6 @@
   },
   "homepage": "https://github.com/marissa-a-darr/project2-collab#readme",
   "dependencies": {
-    "@cubejs-client/core": "^0.31.0",
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.1",
     "connect-session-sequelize": "^7.1.5",
