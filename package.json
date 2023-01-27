@@ -1,43 +1,38 @@
 {
-        "name": "project2-collab",
-        "version": "1.0.0",
-        "description": "This app uses express",
-        "main": "server.js",
-        "scripts": {
-                "test": "node server.js",
-                "start": "node server.js",
-                "seed": "node seeds/seeds.js"
-        },
-        "repository": {
-                "type": "git",
-                "url": "git+https://github.com/marissa-a-darr/project2-collab.git"
-        },
-        "keywords": [
-                "Payment",
-                "Reminder"
-        ],
-        "author": "Marrisa, Madeline, Jonathan, Carlos",
-        "license": "MIT",
-        "bugs": {
-                "url": "https://github.com/marissa-a-darr/project2-collab/issues"
-        },
-        "homepage": "https://github.com/marissa-a-darr/project2-collab#readme",
-        "dependencies": {
-                "bcrypt": "^5.1.0",
-                "body-parser": "^1.20.1",
-                "connect-session-sequelize": "^7.1.5",
-                "cors": "^2.8.5",
-                "dotenv": "^16.0.3",
-                "express": "^4.18.2",
-                "express-handlebars": "^6.0.6",
-                "express-session": "^1.17.3",
-                "expresss": "^0.0.0",
-                "i": "^0.3.7",
-                "inquirer": "^9.1.4",
-                "install": "^0.13.0",
-                "mysql2": "^3.0.1",
-                "npm": "^9.3.1",
-                "path": "^0.12.7",
-                "sequelize": "^6.28.0"
-        }
+  "name": "project2-collab",
+  "version": "1.0.0",
+  "description": "This app uses express",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marissa-a-darr/project2-collab.git"
+  },
+  "keywords": [
+    "Payment",
+    "Reminder"
+  ],
+  "author": "Marrisa, Madeline, Jonathan, Carlos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marissa-a-darr/project2-collab/issues"
+  },
+  "homepage": "https://github.com/marissa-a-darr/project2-collab#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.1",
+    "connect-session-sequelize": "^7.1.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "inquirer": "^9.1.4",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.0.1",
+    "path": "^0.12.7",
+    "sequelize": "^6.28.0"
+  }
 }

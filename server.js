@@ -1,12 +1,15 @@
-const express = require('express');
+
 const cors = require('cors');
-const bodyParser = require('body-parser');
 const Router = require('./routes/api/userRoutes');
-const path = require('path');
-const { User, Payments, BillType } = require('./models');
 const exphbs = require('express-handlebars');
-const helpers = require('./utils/helpers');
 const session = require('express-session');
+const path = require("path");
+const bodyParser = require("body-parser");
+const routes = require("./controllers/routes");
+const sequelize = require("./config/connection");
+const session = require("express-session");
+const helpers = require('./utils/helpers')
+
 
 const app = express();
 
