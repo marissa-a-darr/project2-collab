@@ -16,7 +16,7 @@
 <body>
   
   {{#if logged_in}}
-  <a href="/homepage">Homepage</a>
+  <a href="/">Homepage</a>
   <!--Nav-Bar-->
   <div id="title-container">
       <nav class="navbar navbar-expand-lg" id="navbar">
@@ -29,10 +29,10 @@
             <!--Other Page Links-->
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="nav-link" aria-current="page" href="/homepage">Home</a>
+                <a class="nav-link" aria-current="page" href="/">Home</a>
                 <a class="nav-link" href="/expenses">Expenses</a>
                 <a class="nav-link" href="/chart">Chart</a>
-                <button class="submit-btn" id="logout">Log Out</button>
+                <button class="submit-btn" id="logout" href="/logout">Log Out</button>
               </div>
             </div>
           </div>
@@ -42,8 +42,8 @@
   {{else}}
     <header>
     <div class="container">
-      <button class="submit-btn" id="login">Log In</button>
-      <button class="submit-btn" id="logout">Log Out</button>
+      <button class="submit-btn" id="login" href="/">Log In</button>
+      <button class="submit-btn" id="logout" href="/logout">Log Out</button>
       <h1 class="greeting">Hello</h1>
     </div>
   </header>
@@ -60,7 +60,7 @@
 
   <!-- Render script for logged in users only-->
   {{#if logged_in}}
-  <script src="../../controllers/routes/api/userRoutes.js"></script>
+  <script src="../../controllers/routes/api/"></script>
   {{/if}}
 </body>
 
