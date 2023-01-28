@@ -3,7 +3,7 @@ const router = express.Router();
 const moment = require("moment");
 const Payments = require("../../models/paymentsDue");
 
-router.get("/chart", (req, res) => {
+router.get("/", (req, res) => {
   Payments.findAll()
     .then(payments => {
       let data = {};
