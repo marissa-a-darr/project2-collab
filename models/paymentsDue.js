@@ -20,7 +20,7 @@ Payments.init(
     allowNull: false, 
   },
   amount: {
-    type: DataTypes.DECIMAL,
+    type: DataTypes.INTEGER,
     allowNull: false
   },
   bill_id: {

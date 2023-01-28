@@ -5,6 +5,7 @@ const userSeedData= require ('./userSeed.json')
 const billTypeSeedData = require ('./billTypeSeeds.json')
 
 const seedDatabase = async () => {
+  console.log('seeding database done');
   await sequelize.sync({force: true});
   await BillType.bulkCreate(billTypeSeedData);
   await User.bulkCreate(userSeedData);

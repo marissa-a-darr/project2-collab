@@ -27,12 +27,4 @@ CREATE TABLE Payments (
     user_id INT NOT NULL,
     FOREIGN KEY (bill_id) REFERENCES BillType(id),
     FOREIGN KEY (user_id) REFERENCES User(id)
-
 );
-
--- CREATE TABLE expenses (
---     id INT AUTO_INCREMENT PRIMARY KEY,
---     month VARCHAR(11) NOT NULL,
---     amount INT NOT NULL,
-
--- );
