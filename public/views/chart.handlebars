@@ -6,9 +6,9 @@
 </head>
 <body>
   <canvas id="paymentsChart"></canvas>
-  <script>
+  <script type="text/javascript">
     let ctx = document.getElementById("paymentsChart").getContext("2d");
-    let paymentsData = {{{data | json}}};
+    let paymentsData = {{data}};
     let months = Object.keys(paymentsData);
     let amounts = Object.values(paymentsData);
     let chart = new Chart(ctx, {
