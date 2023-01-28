@@ -46,13 +46,19 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.set('views', './public/views');
 
-app.get('/login', (req, res) => {
-    res.render('login');
-});
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+// Routing for login page
+app.get('/login', (req, res) => {
+  res.render('login', {});
+});
+
+// Routing for register page
+app.get('/register', (req, res) => {
+  res.render('register', {});
+});
 
 app.use(routes);
 
