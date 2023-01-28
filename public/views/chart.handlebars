@@ -1,3 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payments Chart</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+</head>
+<body>
+  <canvas id="paymentsChart"></canvas>
+  <script>
+    let ctx = document.getElementById("paymentsChart").getContext("2d");
+    let paymentsData = {{{data | json}}};
+    let months = Object.keys(paymentsData);
+    let amounts = Object.values(paymentsData);
+    let chart = new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: months,
+        datasets: [{
+          label: "Payments by Month",
+          data: amounts,
+          backgroundColor: "rgba(75, 192, 192, 0.2)",
+          borderColor: "rgba(75, 192, 192, 1)",
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+{{!-- <body>
+  <canvas id="chart"></canvas>
+  <script>
+    let ctx = document.getElementById('chart').getContext('2d');
+    let chart = new Chart(ctx, {{{chart}}});
+  </script>
+</body> --}}
+
 {{!-- <!DOCTYPE html>
 <html>
 <head>
@@ -12,18 +60,6 @@
 </body>
 </html> --}}
 
-
-
-<body>
-  <canvas id="chart"></canvas>
-  <script>
-    let ctx = document.getElementById('chart').getContext('2d');
-    let chart = new Chart(ctx, {{{chart}}});
-  </script>
-</body>
-
-
-
 {{!-- <!--Nav-Bar-->
 <div>
     <!--Chart-->
@@ -32,8 +68,5 @@
     <div style="width: 800px;"><canvas id="acquisitions"></canvas></div>
 
     </div>
-<<<<<<< HEAD:views/partials/chart.handlebars
 </div> --}}
-=======
-</div>
->>>>>>> 4d13241ec7f07b4052b7caf95a7c0905e7c80c11:public/views/chart.handlebars
+{{!-- </div> --}}

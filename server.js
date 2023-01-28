@@ -6,7 +6,6 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const routes = require("./controllers/api");
 const sequelize = require("./config/connection");
-// const exphbs = require("express-handlebars");
 // const session = require("express-session");
 const helpers = require('./utils/helpers')
 
