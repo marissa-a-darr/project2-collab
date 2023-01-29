@@ -1,157 +1,136 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Home Page Styling */
 
-.container{
-    position: relative;
-    width: 90%;
-    height: 87vh;
-    border: 5px solid white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/* Navbar */
-.navbar {
-    background-color: var(--ltblue);
-    height: 120px;
-}
-#navbar {
-    background-color: var(--ltblue);
-    height: 120px;
-}
-.nav-link {
-    color: var(--dkblue);
-    font-size: 25px;
-    margin-left: 20px;
-}
-.submit-btn {
-    margin-top: 20px;
-}
-
-a{
-    color:var(--black);
-    font-size: 40px;
-    font-weight: bolder;
-}
-
-.navbar-brand {
-    margin-left: 15px;
-    margin-right: 30px;
-}
-
-
-body {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url('../img/login.jpg');
-    background-size: cover;
-    background-position: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.logout{
-    position: absolute;
-    top: 10px;
-    right: 0;
-    padding: 10px 20px;
-    text-transform: capitalize;
-    font-size: 16px;
-    color: white;
-    background: none;
-    text-decoration: underline;
-    cursor: pointer;
-    outline: none;
-    border: none;
-}
-
-.login{
-    position: absolute;
-    top: 10px;
-    right: 80px;
-    padding: 10px 20px;
-    text-transform: capitalize;
-    font-size: 16px;
-    color: white;
-    background: none;
-    text-decoration: underline;
-    cursor: pointer;
-    outline: none;
-    border: none;
-}
-
-.welcome-text{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 100px;
-    color: white;
-    font-weight: 800;
-    text-transform: capitalize; 
-}
-
-
-/* Sign-up Content*/
+/* Container for the entire page */
 #container {
-    display:flex;
-    justify-content: center;
-}
-
-.signup-container {
+    width: 100%;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    height: 550px;
-    width: 500px;
-    margin-top: 85px;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    text-align: left;
-    background-color: var(--teal);
-    border-radius: 20px 20px 20px 20px;
-} 
-
-#sign-up {
+    flex-wrap: wrap;
+    }
+    
+    /* Header Section */
+    header {
+    width: 100%;
+    background-color: #3f51b5;
+    color: #fff;
+    padding: 1em;
     display: flex;
-    justify-content: center;
-    font-size: 35px;
-    font-weight: bold;
-    color: var(--ltpink);
-    margin-bottom: 30px;
-}
-
-.form {
-    display:inline-block;
-    justify-content: center;
     align-items: center;
-    vertical-align: top;
+    justify-content: space-between;
+    }
+    
+    /* Title */
+    header h1 {
+    margin: 0;
+    font-size: 2em;
+    }
+    
+    /* Title Link */
+    header h1 a {
+    color: #fff;
+    text-decoration: none;
+    }
+    
+    /* Navigation Bar */
+    header nav {
+    display: flex;
+    align-items: center;
+    }
+    
+    /* Navigation Links */
+    header nav a {
+    color: #fff;
+    margin-left: 1em;
+    text-decoration: none;
+    }
+    
+    /* Main Section */
+    main {
+    width: 100%;
+    padding: 2em;
+    }
+    
+    /* Footer Section */
+    footer {
+    width: 100%;
+    background-color: #3f51b5;
+    color: #fff;
+    padding: 1em;
     text-align: center;
-    margin-top: 100px;
-    margin-left: 300px;
-    width: 350px;
-    font-size: 18px;
-    color: var(--ltpink);
-}
-
-.form-input {
+    }
+    
+    /* Homepage Styling */
+    
+    /* Payment Container */
+    .payment-container {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-}
-.register-form {
-    margin-top: 100px;
-}
-
-.username {
-    margin-bottom: 15px;
-}
-
-.email {
-    margin-right: 10px;
-    margin-bottom: 15px;
-}
-
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+    }
+    
+    /* Payment Item */
+    .payment-item {
+    width: 25%;
+    padding: 1em;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+    }
+    
+    /* Payment Title */
+    .payment-item h3 {
+    margin: 0;
+    font-size: 1.2em;
+    }
+    
+    /* Payment Amount */
+    .payment-item p {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    }
+    
+    /* Payment Date */
+    .payment-item small {
+    display: block;
+    font-size: 0.8em;
+    }
+    
+    /* Add Payment Button */
+    .add-payment-btn {
+    background-color: #3f51b5;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 2em;
+    display: block;
+    width: 100%;
+    text-align: center;
+    }
+    
+    /* Add Payment Button Hover */
+    .add-payment-btn:hover {
+    background-color: #333;
+    }
+    
+    /* Payment Status */
+    .payment-status {
+    margin-top: 1em;
+    font-size: 0.8em;
+    font-weight: bold;
+    }
+    
+    /* Past Payment */
+    .past-payment {
+    background-color: #f5f5f5;
+    color: #333;
+    }
+    
+    /* Current Payment */
+    .current-payment {
+    background-color: #ffeb3b;
+    color: #333;
+    }
