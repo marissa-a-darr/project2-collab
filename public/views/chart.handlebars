@@ -5,68 +5,37 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 </head>
 <body>
-  <canvas id="paymentsChart"></canvas>
-  <script type="text/javascript">
-    let ctx = document.getElementById("paymentsChart").getContext("2d");
-    let paymentsData = {{data}};
-    let months = Object.keys(paymentsData);
-    let amounts = Object.values(paymentsData);
-    let chart = new Chart(ctx, {
-      type: "bar",
-      data: {
-        labels: months,
-        datasets: [{
-          label: "Payments by Month",
-          data: amounts,
-          backgroundColor: "rgba(75, 192, 192, 0.2)",
-          borderColor: "rgba(75, 192, 192, 1)",
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
+  <div>
+    <canvas id="paymentsChart" width="500" height="300">chart</canvas>
+    <script type="text/javascript">
+      let ctx = document.getElementById("paymentsChart").getContext("2d");
+      let paymentsData = {{{chartData}}};
+      let months = Object.keys(paymentsData);
+      let amounts = Object.values(paymentsData);
+      let chart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: months,
+          datasets: [{
+            label: "Payments by Month",
+            data: amounts,
+            backgroundColor: "rgba(75, 192, 192, 0.2)",
+            borderColor: "rgba(75, 192, 192, 1)",
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+            }]
           }
         }
-      }
-    });
-  </script>
+      });
+    </script>
+  </div>  
 </body>
 </html>
 
-
-
-
-{{!-- <body>
-  <canvas id="chart"></canvas>
-  <script>
-    let ctx = document.getElementById('chart').getContext('2d');
-    let chart = new Chart(ctx, {{{chart}}});
-  </script>
-</body> --}}
-
-{{!-- <!DOCTYPE html>
-<html>
-<head>
-    <title>Chart</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-</head>
-<body>
-    <canvas id="chart"></canvas>
-    <script>
-        {{{chart}}}
-    </script>
-</body>
-</html> --}}
-
-{{!-- <!--Nav-Bar-->
-<div>
-    <!--Chart-->
-    <div>
-      <!--Chart Handlebars-->
-    <div style="width: 800px;"><canvas id="acquisitions"></canvas></div>
-
-    </div>
-</div> --}}
-{{!-- </div> --}}
