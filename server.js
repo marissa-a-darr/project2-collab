@@ -4,13 +4,14 @@ const exphbs = require('express-handlebars');
 const session = require('express-session');
 const path = require("path");
 const bodyParser = require("body-parser");
-const routes = require("./controllers/api");
+const homeRoutes = require("./controllers/index");
+const apiRoutes = require("./controllers/api/index");
+const sequelize = require("./config/connection");
 const helpers = require('./utils/helpers')
 
 
 const app = express();
 
-const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 
@@ -60,7 +61,8 @@ app.get('/register', (req, res) => {
   res.render('register', {});
 });
 
-app.use(routes);
+app.use(homeRoutes);
+app.use(apiRoutes)
 
 sequelize.sync({ force: true }).then(() => {
     app.listen(PORT, () => console.log('Now listening at', PORT));
