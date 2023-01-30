@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
       ],
     })
     const payments = paymentData.map((payment)=> payment.get({plain: true}));
-    res.render('expenses', {
+    res.render('', {
       payments,
       logged_in: req.session.logged_in
     });
