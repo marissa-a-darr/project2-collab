@@ -1,10 +1,9 @@
 const express = require("express");
-const path = require('path');
 const moment = require("moment");
 const Payments = require("../../models/paymentsDue");
 const router = express.Router();
 
-router.get("/", (req, res) => {
+router.get("/bar", (req, res) => {
   Payments.findAll()
     .then(payments => {
       let data = {};

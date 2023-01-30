@@ -1,19 +1,23 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req, res) => {
+
+
+router.get('/create_payment', (req, res) => {
   res.render('payment');
+  console.log('TEST');
 });
+
+
 
 module.exports = router;
 
 
-
-
+// const withAuth = require('../../utils/auth');
 
 // const { async } = require('rxjs');
 // const { Payments, User } = require ('../../models');
-// const withAuth = require('../../utils/auth');
+
 
 // router.get('/', async (req, res) => {
 //   try {
@@ -28,13 +32,15 @@ module.exports = router;
 //     const payments = paymentData.map((payment)=> payment.get({plain: true}));
 //     res.render('expenses', {
 //       payments,
-//       logged_in: req.session.logged_in
+//      ?
 //     });
 //   } catch (err) {
 //     res.status(500).json(err);
 //   }
 // });
-// router.post('/', withAuth, async (req, res) => {
+
+
+// router.post('/create_payment', withAuth, async (req, res) => {
 //   try { 
 //     const newPayment = await Payments.create({
 //       ...req.body,
