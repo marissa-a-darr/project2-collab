@@ -7,6 +7,8 @@ const signupFormHandler = async (event) => {
   const lastName = document.querySelector(".lastName-register").value.trim();
   const email = document.querySelector(".email-register").value.trim();
   const password = document.querySelector(".password-register").value.trim();
+
+  // Collect values from the register form
   if (firstName && lastName && email && password) {
     try {
       const response = await fetch(`/users/register`, {

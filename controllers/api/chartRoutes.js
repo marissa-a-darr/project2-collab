@@ -3,6 +3,7 @@ const moment = require("moment");
 const Payments = require("../../models/paymentsDue");
 const router = express.Router();
 
+// Adding in Chart data
 router.get("/bar", (req, res) => {
   Payments.findAll()
     .then(payments => {

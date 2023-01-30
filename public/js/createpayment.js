@@ -6,6 +6,8 @@ const newPaymentFormHandler = async (event) => {
   const lastname = document.querySelector('.lastName-register').value.trim();
   const email = document.querySelector('.email-register').value.trim();
   const password = document.querySelector('.password-register').value.trim();
+
+  // Collect values from the form
   if (firstname && lastname && email && password) {
     const response = await fetch(`/users/register`, {
       method: 'POST',

@@ -5,7 +5,8 @@ const newPaymentForm = async (event) => {
     const dueDate = document.querySelector('#dueDate').value.trim();
     const amountLabel = document.querySelector('#amountLabel').value.trim();
     const billType = document.querySelector('#billType').value.trim();
-  
+
+    // Collect values from the login form
     if (paymentName && dueDate && amountLabel && billType) {
       const response = await fetch(`/payments/create_payment`, {
         method: 'POST',
