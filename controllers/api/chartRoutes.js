@@ -1,5 +1,4 @@
 const express = require("express");
-const path = require('path');
 const moment = require("moment");
 const Payments = require("../../models/paymentsDue");
 const router = express.Router();
