@@ -20,11 +20,11 @@ CREATE TABLE BillType (
 -- Payments table
 CREATE TABLE Payments (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    payment_name VARCHAR(15) NOT NULL,
+    payment_name VARCHAR(40) NOT NULL,
     payment_date DATE NOT NULL,
     amount DECIMAL(10,2) NOT NULL,
     bill_id INT NOT NULL,
     user_id INT NOT NULL,
     FOREIGN KEY (bill_id) REFERENCES BillType(id),
     FOREIGN KEY (user_id) REFERENCES User(id)
-);
+); 

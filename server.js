@@ -39,11 +39,6 @@ app.use(session(sess));
 
 
 app.engine('handlebars', hbs.engine);
-// app.engine('hbs', hbs.engine({
-//     layoutsDir: __dirname + '/views/layouts',
-//     extname: 'hbs',
-//     defaultLayout: 'main',
-// }));
 app.set('view engine', 'handlebars');
 app.set('views', './public/views');
 
@@ -51,6 +46,7 @@ app.set('views', './public/views');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+
 // Routing for login page
 app.get('/login', (req, res) => {
   res.render('login', {});

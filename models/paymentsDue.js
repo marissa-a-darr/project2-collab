@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require ('sequelize');
 const sequelize = require('../config/connection');
 
+// Payments Model
 class Payments extends Model {}
 
 Payments.init(
@@ -34,7 +35,7 @@ Payments.init(
   user_id : {
     type:DataTypes.INTEGER,
     references: {
-      model: 'user',
+      model: 'User',
       key: 'id',
       unique: true
     }
@@ -47,4 +48,4 @@ Payments.init(
   underscored: true,
   modelName: 'Payments'}
 );
-module.exports = Payments;
+module.exports = Payments; 

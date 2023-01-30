@@ -7,6 +7,7 @@
   <button type="submit" class="btn" id="new-btn">+ New Expense</button>
 </div>
 
+{{#each payment as |payment| }}
 <!--Expenses Card-->
 <div id="container">
   <div class="card" style="width: 20rem;">
@@ -32,4 +33,5 @@
       </div>
   </div>
 </div>
+{{/each}}
 </div>

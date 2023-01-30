@@ -12,4 +12,4 @@ BillType.hasMany(Payments, {
   onDelete: "CASCADE",
 });
 
-module.exports = { User, Payments, BillType};
+module.exports = { User, Payments, BillType}; 
