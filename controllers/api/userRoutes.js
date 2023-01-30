@@ -4,18 +4,14 @@ const bcrypt = require('bcrypt');
 const User = require('../../models/user');
 const path = require('path');
 const exphbs = require('express-handlebars');
-// const hbs = exphbs.create({
-//   extname: '.hbs',
-//   layoutsDir: path.join(__dirname, 'views/layouts'),
-//   partialsDir: path.join(__dirname, 'views/partials'),
-// });
 
-// Define routes
+
+
 router.get("/", (req, res) => {
   res.render('login', { message: null });
 });
-
-router.post("/", async (req, res) => {
+  
+router.post("/login", async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
     if (!userData) {
