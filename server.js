@@ -39,11 +39,6 @@ app.use(session(sess));
 
 
 app.engine('handlebars', hbs.engine);
-// app.engine('hbs', hbs.engine({
-//     layoutsDir: __dirname + '/views/layouts',
-//     extname: 'hbs',
-//     defaultLayout: 'main',
-// }));
 app.set('view engine', 'handlebars');
 app.set('views', './public/views');
 
