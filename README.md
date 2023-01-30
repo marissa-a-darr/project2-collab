@@ -13,6 +13,52 @@ SO THAT I can have a better outlook on my monthly spending
 
 ## Acceptance Criteria
 
+GIVEN a CMS-style expenses site
+
+WHEN I visit the site for the first time
+
+THEN I am prompted to either sign up or sign in
+
+WHEN I choose to sign up
+
+THEN I am prompted to enter my first and last name and create a username and password
+
+WHEN I click on the sign-up button
+
+THEN my user credentials are saved and I am logged into the site
+
+WHEN I revisit the site at a later time and choose to sign in
+
+THEN I am prompted to enter my username and password
+
+WHEN I am signed in to the site
+
+THEN I see navigation links for the homepage, the dashboard, charts, expenses and the option to log out
+
+WHEN I click on the homepage option in the navigation
+
+THEN I am taken to the homepage presented with the expenses or the chart
+
+WHEN I click on the expenses
+
+THEN I am presented with each of my montly expenses including: The payment Name, Payment due date, amount, and its Bill Type
+
+WHEN I click New Expense
+
+THEN I am presented with an option to enter a new montly expense
+
+WHEN I click on the charts
+
+THEN I am able to see a chart view of my montly expenses
+
+WHEN I click on the logout option in the navigation
+
+THEN I am signed out of the site
+
+WHEN I am idle on the site for more than a set time
+
+THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
+
 
 ## Technologies Used
 
