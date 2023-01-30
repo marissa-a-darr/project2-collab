@@ -9,7 +9,7 @@ const { Payments, User } = require ('../../models');
 const withAuth = require('../../utils/auth');
 
 
-router.get('/', async (req, res) => {
+router.get('/expenses', async (req, res) => {
   try {
     const paymentData = await Payments.findAll({
       include: [

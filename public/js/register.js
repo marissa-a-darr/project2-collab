@@ -27,7 +27,8 @@ const signupFormHandler = async (event) => {
 
       if (response.ok) {
         console.log("success");
-        document.location.replace("/payments");
+        document.location.replace("/login");
+        alert("Account successfully created!")
       } else {
         alert("Failed to create user");
       }
