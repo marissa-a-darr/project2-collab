@@ -34,7 +34,7 @@ Payments.init(
   user_id : {
     type:DataTypes.INTEGER,
     references: {
-      model: 'user',
+      model: 'User',
       key: 'id',
       unique: true
     }
@@ -47,4 +47,4 @@ Payments.init(
   underscored: true,
   modelName: 'Payments'}
 );
-module.exports = Payments;
+module.exports = Payments; 

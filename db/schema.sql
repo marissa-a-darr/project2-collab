@@ -27,4 +27,4 @@ CREATE TABLE Payments (
     user_id INT NOT NULL,
     FOREIGN KEY (bill_id) REFERENCES BillType(id),
     FOREIGN KEY (user_id) REFERENCES User(id)
-);
+); 

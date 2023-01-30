@@ -7,12 +7,6 @@ const paymentDue = require('../../models/paymentsDue');
 const { async } = require('rxjs');
 const { Payments, User } = require ('../../models');
 const withAuth = require('../../utils/auth');
-//need to change route so it is only the user that is logged in
-router.get('/', (req, res) => {
-  paymentDue.findAll().then((paymentData) => {
-    res.json(paymentData);
-  });
-});
 
 
 router.get('/', async (req, res) => {

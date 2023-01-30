@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt');
 const User = require('../../models/user');
 const path = require('path');
 const exphbs = require('express-handlebars');
+const { registerDecorator } = require('handlebars');
 
 // Define routes
 router.get("/", (req, res) => {

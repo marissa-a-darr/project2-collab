@@ -26,4 +26,4 @@ BillType.init(
 
 sequelize.sync({force: true});
 
-module.exports = BillType;
+module.exports = BillType; 
