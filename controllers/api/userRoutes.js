@@ -4,11 +4,6 @@ const bcrypt = require('bcrypt');
 const User = require('../../models/user');
 const path = require('path');
 const exphbs = require('express-handlebars');
-// const hbs = exphbs.create({
-//   extname: '.hbs',
-//   layoutsDir: path.join(__dirname, 'views/layouts'),
-//   partialsDir: path.join(__dirname, 'views/partials'),
-// });
 
 // Define routes
 router.get("/", (req, res) => {
