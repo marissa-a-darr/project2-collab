@@ -46,6 +46,7 @@ app.set('views', './public/views');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+
 // Routing for login page
 app.get('/login', (req, res) => {
   res.render('login', {});

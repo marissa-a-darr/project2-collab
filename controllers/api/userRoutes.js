@@ -5,13 +5,12 @@ const User = require('../../models/user');
 const path = require('path');
 const exphbs = require('express-handlebars');
 
-
-
+// Define routes
 router.get("/", (req, res) => {
   res.render('login', { message: null });
 });
-  
-router.post("/login", async (req, res) => {
+
+router.post("/", async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
     if (!userData) {
@@ -60,5 +59,7 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
+
+
 
 module.exports = router;
