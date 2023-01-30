@@ -1,0 +1,28 @@
+<div class="container mt-5">
+    <h1 class="text-center">Add Payment</h1>
+    <form action="/payments/add" method="POST">
+        <div class="form-group">
+        <label for="paymentName">Payment Name</label>
+        <input type="text" class="form-control" id="paymentName" name="paymentName" placeholder="Enter payment name">
+        </div>
+        <div class="form-group">
+        <label for="dueDate">Due Date</label>
+        <input type="date" class="form-control" id="dueDate" name="dueDate">
+        </div>
+        <div class="form-group">
+        <label for="amount">Amount</label>
+        <input type="number" class="form-control" id="amount" name="amount" placeholder="Enter amount">
+        </div>
+        <div class="form-group">
+        <label for="billType">Bill Type</label>
+        <select class="form-control" id="billType" name="billType">
+            <option value="">Select bill type</option>
+            <option value="Utilities">Utilities</option>
+            <option value="Rent/Mortgage">Rent/Mortgage</option>
+            <option value="Subscriptions">Subscriptions</option>
+            <option value="Other">Other</option>
+        </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
