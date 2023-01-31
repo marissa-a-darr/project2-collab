@@ -6,21 +6,30 @@ const loginFormHandler = async (event) => {
   const password = document.querySelector('#password-login').value.trim();
 
   if (email && password) {
-    // Send a POST request to the API endpoint
-    const response = await fetch('/users/login', {
-      method: 'POST',
-      body: JSON.stringify({ email: email, password: password }),
-      headers: { 'Content-Type': 'application/json' },
+    const response = await fetch(`/users/login`, {
+      method: "POST",
+      body: JSON.stringify({
+        email: email,
+        password: password,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
 
+    const data = await response.json();
+    console.log(data);
+
     if (response.ok) {
-      // If successful, redirect the browser to the profile page
-      document.location.replace('/payments');
+      console.log("success");
+      document.location.replace("/payments");
+      alert("Login Successful")
     } else {
-      alert('Please check your credentials!');
+      alert("Please check credentials");
     }
-  }
+}
 };
+
   
   
 let btn = document.querySelector('.submit-btn');

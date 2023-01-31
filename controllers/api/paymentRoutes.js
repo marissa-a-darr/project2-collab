@@ -28,7 +28,7 @@ router.get('/expenses', async (req, res) => {
     res.status(500).json(err);
   }
 });
-router.get('create_payment', withAuth, async (req, res)=> {
+router.get('/create_payment', withAuth, async (req, res)=> {
   res.render('expenses')
 })
 //MARISSA REVISIT ONCE DATABASE IS WORKING
@@ -43,6 +43,9 @@ router.post('/create_payment', withAuth, async (req, res) => {
     res.status(400).json(err);
   }
 });
+
+
+
 router.delete('/delete/:id', withAuth, async (req, res)=> {
   try {
     const paymentData = await Payments.destroy({

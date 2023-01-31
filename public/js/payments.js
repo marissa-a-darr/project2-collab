@@ -16,7 +16,8 @@ const newPaymentForm = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/homepage');
+        document.location.replace('/payments');
+        alert('Payment added successfully!')
       } else {
         alert('Failed to create payment');
       }

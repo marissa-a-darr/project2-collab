@@ -56,6 +56,10 @@ app.get('/login', (req, res) => {
 app.get('/register', (req, res) => {
   res.render('register', {});
 });
+//Routing for payment page
+app.get('/payment', (req, res) => {
+  res.render('payment');
+});
 
 app.use(homeRoutes);
 app.use(apiRoutes)
