@@ -1,0 +1,20 @@
+<div class="alert-box">
+    <p class="alert"></p>
+</div>
+
+<!--New User (Register) Layout-->
+<div class="register-form">
+    <h1 class="heading">Register</h1>
+    <input type="text" placeholder="First Name" autocomplete="off" class="firstName-register" required>
+     <input type="text" placeholder="Last Name" autocomplete="off" class="lastName-register" required>
+    <input type="email" placeholder="Email" autocomplete="off" class="email-register" required>
+    <input type="password" placeholder="Password" autocomplete="off" class="password-register" required>
+    {{!-- <a class="submit-btn" href="/login"> --}}
+        <button class="submit-btn" type="submit">Register</button>
+    {{!-- </a> --}}
+    <!--If user already has an account-->
+    <a href="/login" class="link"> Already a member? Log In</a>
+</div>
+
+<!--Add the Script-->
+<script src="../js/register.js"></script>

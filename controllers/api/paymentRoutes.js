@@ -1,9 +1,15 @@
-const router = require('express').Router();
+const express = require('express');
+const router = express.Router();
+
+
+
+const paymentDue = require('../../models/paymentsDue');
 const { async } = require('rxjs');
 const { Payments, User } = require ('../../models');
 const withAuth = require('../../utils/auth');
 
-router.get('/', async (req, res) => {
+
+router.get('/expenses', async (req, res) => {
   try {
     const paymentData = await Payments.findAll({
       include: [
@@ -14,7 +20,7 @@ router.get('/', async (req, res) => {
       ],
     })
     const payments = paymentData.map((payment)=> payment.get({plain: true}));
-    res.render('expenses', {
+    res.render('', {
       payments,
       logged_in: req.session.logged_in
     });
@@ -22,7 +28,11 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-router.post('/', withAuth, async (req, res) => {
+router.get('/create_payment', withAuth, async (req, res)=> {
+  res.render('expenses')
+})
+//MARISSA REVISIT ONCE DATABASE IS WORKING
+router.post('/create_payment', withAuth, async (req, res) => {
   try { 
     const newPayment = await Payments.create({
       ...req.body,
@@ -33,7 +43,10 @@ router.post('/', withAuth, async (req, res) => {
     res.status(400).json(err);
   }
 });
-router.delete('/:id', withAuth, async (req, res)=> {
+
+
+
+router.delete('/delete/:id', withAuth, async (req, res)=> {
   try {
     const paymentData = await Payments.destroy({
       where: {
@@ -50,5 +63,5 @@ router.delete('/:id', withAuth, async (req, res)=> {
     res.status(500).json(err);
   }
 });
-module.exports = router; 
 
+module.exports = router; 

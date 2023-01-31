@@ -10,19 +10,20 @@ BillType.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true, 
-
+    },
+    bill_type: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
   },
-  bill_type: {
-    type: DataTypes.STRING,
-    allowNull: false
-  }
-},
-{
-  sequelize,
-  timestamps: false, 
-  freezeTableName: true,
-  underscored: true,
-  modelName: 'billtype'}
+  {
+    sequelize,
+    timestamps: false, 
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'Billtype'}
 );
 
-module.exports = BillType;
+sequelize.sync({force: true});
+
+module.exports = BillType; 
