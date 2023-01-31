@@ -33,6 +33,12 @@ SO THAT I can have a better outlook on my monthly spending
 - .env to protect API keys/Sensative information
 
 
+
+
+![Screenshot 2023-01-30 211521](https://user-images.githubusercontent.com/111001779/215642849-e77cb63f-4bf1-43a4-beb1-ba88b468d326.png)
+
+
+
 ## Mockup
 
 The following is a link to the deployed "Better Have My Money Site":
